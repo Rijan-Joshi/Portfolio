@@ -1,0 +1,242 @@
+/* Nepal-Inspired CSS */
+:root {
+  --nepal-red: #c8102e;
+  --nepal-blue: #003893;
+  --nepal-white: #f5f5f5;
+  --nepal-gold: #ffc400;
+  --nepal-mountain: #e0e0e0;
+  --nepal-temple: #835c3b;
+  --nepal-sky: #a7d8ff;
+  --text-color: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--nepal-sky) 0%, #e8f4ff 100%);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Nepal Background Elements */
+.nepal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Mountains - Himalayan Style */
+.mountains {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="none"><path fill="%23e0e0e0" d="M0,400 L0,200 L100,150 L200,220 L300,100 L400,180 L500,80 L600,180 L700,120 L800,170 L900,100 L1000,220 L1100,150 L1200,200 L1200,400 Z"/><path fill="%23f2f2f2" d="M300,400 L300,150 L350,120 L400,150 L450,100 L500,140 L500,400 Z"/><path fill="%23ffffff" d="M350,120 L400,150 L450,100 L400,130 Z M750,100 L800,170 L850,130 L800,150 Z"/></svg>');
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* Temples - Nepali Pagoda Style */
+.temples {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" preserveAspectRatio="none"><path fill="%23835c3b" d="M200,200 L200,120 L210,120 L210,110 L220,110 L220,100 L230,100 L230,90 L240,90 L240,80 L250,80 L250,90 L260,90 L260,100 L270,100 L270,110 L280,110 L280,120 L290,120 L290,200 Z M700,200 L700,140 L710,140 L710,130 L720,130 L720,120 L730,120 L730,110 L740,110 L740,100 L750,100 L750,90 L760,90 L760,100 L770,100 L770,110 L780,110 L780,120 L790,120 L790,130 L800,130 L800,140 L810,140 L810,200 Z M500,200 L500,150 L515,150 L515,140 L530,140 L530,130 L545,130 L545,120 L560,120 L560,130 L575,130 L575,140 L590,140 L590,150 L605,150 L605,200 Z"/></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Prayer Flags */
+.prayer-flags {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 50" preserveAspectRatio="none"><path d="M0,5 L1200,5" stroke="%23333" stroke-width="2"/><rect x="0" y="5" width="80" height="25" fill="%23c8102e"/><rect x="80" y="5" width="80" height="25" fill="%23003893"/><rect x="160" y="5" width="80" height="25" fill="%23ffc400"/><rect x="240" y="5" width="80" height="25" fill="%2300A86B"/><rect x="320" y="5" width="80" height="25" fill="%23FFFFFF"/><rect x="400" y="5" width="80" height="25" fill="%23c8102e"/><rect x="480" y="5" width="80" height="25" fill="%23003893"/><rect x="560" y="5" width="80" height="25" fill="%23ffc400"/><rect x="640" y="5" width="80" height="25" fill="%2300A86B"/><rect x="720" y="5" width="80" height="25" fill="%23FFFFFF"/><rect x="800" y="5" width="80" height="25" fill="%23c8102e"/><rect x="880" y="5" width="80" height="25" fill="%23003893"/><rect x="960" y="5" width="80" height="25" fill="%23ffc400"/><rect x="1040" y="5" width="80" height="25" fill="%2300A86B"/><rect x="1120" y="5" width="80" height="25" fill="%23FFFFFF"/></svg>');
+  background-size: contain;
+  background-repeat: repeat-x;
+  animation: wave 10s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+}
+
+/* Main Content */
+.main-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 5% 10% 5%;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--nepal-blue);
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  animation: fade-in 1.5s ease forwards;
+}
+
+/* Photo Frame with Mandala Border */
+.photo-frame {
+  position: relative;
+  margin: 3rem 0;
+  padding: 10px;
+  background: linear-gradient(45deg, var(--nepal-red), var(--nepal-blue));
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transform: rotate(-3deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+  animation: fade-in 1.5s ease 0.5s forwards;
+}
+
+.mandala-border {
+  background-color: var(--nepal-white);
+  border: 3px solid var(--nepal-gold);
+  border-radius: 5px;
+  padding: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Cpath fill='none' stroke='%23ffc400' stroke-width='2' d='M50,5 L50,15 M50,85 L50,95 M5,50 L15,50 M85,50 L95,50 M18,18 L25,25 M75,75 L82,82 M18,82 L25,75 M75,25 L82,18 M50,20 A30,30 0 0,1 80,50 A30,30 0 0,1 50,80 A30,30 0 0,1 20,50 A30,30 0 0,1 50,20 Z'/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+}
+
+.photo-frame:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.photo-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 2px solid var(--nepal-gold);
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.photo-frame:hover img {
+  transform: scale(1.05);
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  animation: fade-in 1.5s ease 1s forwards;
+  opacity: 0;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+/* Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .photo-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .social-link {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .photo-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .social-link {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .social-links {
+    gap: 1.5rem;
+  }
+}

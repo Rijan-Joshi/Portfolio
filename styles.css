@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 *,
 *::before,
@@ -123,4 +123,374 @@ ul {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+*/
+
+
+/* Studio Ghibli Inspired CSS */
+:root {
+  --ghibli-blue: #7ec0ee;
+  --ghibli-green: #88b04b;
+  --ghibli-yellow: #f5deb3;
+  --ghibli-accent: #e66c64;
+  --ghibli-dark: #445566;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(to bottom, #e2f3fc, #ffffff);
+  color: var(--ghibli-dark);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Clouds */
+.clouds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: float linear infinite;
+}
+
+.cloud:before,
+.cloud:after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+.cloud1 {
+  width: 120px;
+  height: 60px;
+  top: 15%;
+  left: -120px;
+  animation-duration: 90s;
+}
+
+.cloud1:before {
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  left: 20px;
+}
+
+.cloud1:after {
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  right: 20px;
+}
+
+.cloud2 {
+  width: 100px;
+  height: 50px;
+  top: 35%;
+  left: -100px;
+  animation-duration: 60s;
+  animation-delay: 10s;
+}
+
+.cloud2:before {
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 15px;
+}
+
+.cloud2:after {
+  width: 70px;
+  height: 70px;
+  top: -35px;
+  right: 15px;
+}
+
+.cloud3 {
+  width: 150px;
+  height: 75px;
+  top: 65%;
+  left: -150px;
+  animation-duration: 120s;
+  animation-delay: 5s;
+}
+
+.cloud3:before {
+  width: 75px;
+  height: 75px;
+  top: -38px;
+  left: 25px;
+}
+
+.cloud3:after {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  right: 25px;
+}
+
+.cloud4 {
+  width: 180px;
+  height: 90px;
+  top: 85%;
+  left: -180px;
+  animation-duration: 150s;
+  animation-delay: 15s;
+}
+
+.cloud4:before {
+  width: 90px;
+  height: 90px;
+  top: -45px;
+  left: 30px;
+}
+
+.cloud4:after {
+  width: 120px;
+  height: 120px;
+  top: -60px;
+  right: 30px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px));
+  }
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--ghibli-dark);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation a {
+  margin-left: 1.5rem;
+  color: var(--ghibli-dark);
+  text-decoration: none;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navigation a:hover {
+  color: var(--ghibli-accent);
+}
+
+.navigation a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--ghibli-accent);
+  transition: width 0.3s;
+}
+
+.navigation a:hover:after {
+  width: 100%;
+}
+
+/* Main Content */
+main {
+  padding: 3rem 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-container {
+  margin: 3rem 0;
+  position: relative;
+}
+
+.frame {
+  position: relative;
+  background-color: var(--ghibli-yellow);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  transition: transform 0.5s;
+}
+
+.frame:hover {
+  transform: rotate(0deg);
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 300px;
+  height: 300px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.photo:hover img {
+  transform: scale(1.05);
+}
+
+/* Spirits (like soot sprites) */
+.spirits {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.spirit {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  animation: float-spirit 5s ease-in-out infinite;
+}
+
+.spirit1 {
+  top: 20%;
+  left: -20px;
+  animation-delay: 0s;
+}
+
+.spirit2 {
+  top: 70%;
+  right: -20px;
+  animation-delay: 1.5s;
+}
+
+.spirit3 {
+  bottom: -10px;
+  left: 50%;
+  animation-delay: 0.8s;
+}
+
+@keyframes float-spirit {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* About Section */
+#about {
+  max-width: 800px;
+  margin: 3rem auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: var(--ghibli-accent);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+#contact {
+  max-width: 800px;
+  margin: 3rem auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 3rem;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--ghibli-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navigation {
+    margin-top: 1rem;
+  }
+
+  .navigation a {
+    margin: 0 0.5rem;
+  }
+
+  .photo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
