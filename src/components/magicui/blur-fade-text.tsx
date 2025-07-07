@@ -4,8 +4,6 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useMemo } from "react";
 
-export const runtime = "edge";
-
 interface BlurFadeTextProps {
   text: string;
   className?: string;
