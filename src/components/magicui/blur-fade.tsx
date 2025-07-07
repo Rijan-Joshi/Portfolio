@@ -3,6 +3,8 @@
 import { AnimatePresence, motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
 
+export const runtime = "edge";
+
 interface BlurFadeProps {
   children: React.ReactNode;
   className?: string;

@@ -2,6 +2,8 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { getBlogPosts } from "@/data/blog";
 import Link from "next/link";
 
+export const runtime = "edge";
+
 export const metadata = {
   title: "Blog",
   description: "My thoughts on software development, life, and more.",
