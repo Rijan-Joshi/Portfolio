@@ -7,7 +7,7 @@ export const DATA = {
   url: "https://rijan-shrestha.com.np",
   location: "Nepal",
   locationLink: "",
-  description: "19 · Architect of Logic · Engineer of Dreams",
+  description: "19 · Nothing (Yet)",
   summary:
     "I train my neurons to train the neural nets to test my ability to test the unseen.",
   avatarUrl: "/me.jpg",
