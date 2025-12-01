@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 
 const messages = [
   "Hi! Welcome to my world! ✨",
@@ -17,6 +18,7 @@ const PlayfulCharacter: React.FC = () => {
   const [messageIndex, setMessageIndex] = useState(0);
   const [showMessage, setShowMessage] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   // Auto-hide message after a few seconds
   useEffect(() => {
@@ -44,6 +46,8 @@ const PlayfulCharacter: React.FC = () => {
     setShowMessage(true);
   };
 
+  if (!isVisible) return null;
+
   return (
     <motion.div
       // Mobile: Fixed Bottom Right
@@ -52,6 +56,7 @@ const PlayfulCharacter: React.FC = () => {
       className="fixed z-[60] right-6 bottom-6 lg:top-6 lg:bottom-auto block print:hidden touch-none"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
+      exit={{ scale: 0, opacity: 0 }}
       transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}
       drag
       dragMomentum={false}
@@ -63,6 +68,18 @@ const PlayfulCharacter: React.FC = () => {
         onMouseLeave={() => setIsHovered(false)}
         onClick={handleClick}
       >
+        {/* Close Button */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsVisible(false);
+          }}
+          className="absolute -top-2 -right-2 bg-neutral-200 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity z-50 hover:bg-red-500 hover:text-white"
+          title="Remove Character"
+        >
+          <X size={12} />
+        </button>
+
         {/* Speech Bubble */}
         <AnimatePresence mode="wait">
           {showMessage && (

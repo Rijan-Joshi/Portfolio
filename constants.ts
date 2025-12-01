@@ -2,7 +2,7 @@ import { Project, Experience, Blog } from "./types";
 
 export const PERSONAL_INFO = {
   name: "Rijan Shrestha",
-  title: "AI/ML Engineer & UI/UX Designer",
+  title: "",
   bio: "Building intelligent systems and pixel-perfect interfaces. Specializing in deep learning, speech synthesis, and modern web applications.",
   location: "Kathmandu, Nepal",
   email: "csaijspy@gmail.com",
