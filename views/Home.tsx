@@ -50,7 +50,8 @@ const Home: React.FC = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <h1 className="text-4xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
+        {/* Adjusted font size from 4xl to 3xl for better mobile fit */}
+        <h1 className="text-3xl font-bold text-neutral-900 dark:text-white mb-2 tracking-tight">
           {PERSONAL_INFO.name}
         </h1>
         <p className="text-lg text-neutral-600 dark:text-neutral-400 font-medium mb-6">
@@ -86,14 +87,12 @@ const Home: React.FC = () => {
 
       {/* About Section */}
       <motion.section variants={itemVariants}>
-        <h2 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-6">
+        <h2 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">
           About
         </h2>
-        <div className="prose dark:prose-invert max-w-none text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl leading-relaxed font-light">
-          <p>
-            I am learning machine learning, deep learning, trying to implement a
-            new paper every Friday.
-          </p>
+        {/* Adjusted font size: Reduced from text-3xl to text-lg/xl for better readability */}
+        <div className="prose dark:prose-invert max-w-none text-neutral-700 dark:text-neutral-300 text-4xl md:text-xl leading-tight font-light">
+          <p>learning ML - trying to implement a new paper every Friday.</p>
         </div>
       </motion.section>
 
@@ -169,7 +168,7 @@ const Home: React.FC = () => {
                     {blog.date}
                   </span>
                 </div>
-                <p className="text-lg text-neutral-600 dark:text-neutral-400 line-clamp-2 max-w-3xl leading-relaxed">
+                <p className="text-base md:text-lg text-neutral-600 dark:text-neutral-400 line-clamp-2 max-w-3xl leading-relaxed">
                   {blog.excerpt}
                 </p>
               </motion.div>
