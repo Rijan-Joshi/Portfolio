@@ -1,4 +1,4 @@
-import { Project, Experience, Blog } from './types';
+import { Project, Experience, Blog } from "./types";
 
 export const PERSONAL_INFO = {
   name: "Rijan Shrestha",
@@ -8,23 +8,26 @@ export const PERSONAL_INFO = {
   email: "csaijspy@gmail.com",
   phone: "9865271896",
   github: "https://github.com/Rijan-Joshi",
-  linkedin: "https://www.linkedin.com/in/rijan-shrestha-6a72b3299/?skipRedirect=true",
-  portfolio: "#", 
+  linkedin:
+    "https://www.linkedin.com/in/rijan-shrestha-6a72b3299/?skipRedirect=true",
+  portfolio: "#",
 };
 
 export const PROJECTS: Project[] = [
   {
     id: "1",
     title: "Redis-like In-Memory DB",
-    description: "A high-performance custom Redis server implementation in Python. Features concurrent client handling via TCP, primary-replica replication, transaction support, and RDB persistence mechanisms.",
+    description:
+      "A high-performance custom Redis server implementation in Python. Features concurrent client handling via TCP, primary-replica replication, transaction support, and RDB persistence mechanisms.",
     techStack: ["Python", "TCP/IP", "Asyncio", "Distributed Systems"],
     link: "#",
-    github: "https://github.com/Rijan-Joshi", 
+    github: "https://github.com/Rijan-Joshi",
   },
   {
     id: "2",
     title: "RNN Music Composer",
-    description: "Generative AI model utilizing Recurrent Neural Networks (RNN) to predict and compose original sheet music in ABC notation. Trained on a dataset of folk tunes to generate coherent musical structures.",
+    description:
+      "Generative AI model utilizing Recurrent Neural Networks (RNN) to predict and compose original sheet music in ABC notation. Trained on a dataset of folk tunes to generate coherent musical structures.",
     techStack: ["TensorFlow", "Deep Learning", "Python", "NLP"],
     link: "#",
     github: "https://github.com/Rijan-Joshi",
@@ -32,11 +35,12 @@ export const PROJECTS: Project[] = [
   {
     id: "3",
     title: "Job Finder Mobile App",
-    description: "A cross-platform mobile application for job searching with a focus on UX. Features advanced filtering, easy application flows, and a modern, responsive interface built with React Native.",
+    description:
+      "A cross-platform mobile application for job searching with a focus on UX. Features advanced filtering, easy application flows, and a modern, responsive interface built with React Native.",
     techStack: ["React Native", "Expo", "Redux", "Mobile UI"],
     link: "#",
     github: "https://github.com/Rijan-Joshi",
-  }
+  },
 ];
 
 export const EXPERIENCE: Experience[] = [
@@ -46,13 +50,13 @@ export const EXPERIENCE: Experience[] = [
     company: "Next Wave AI",
     period: "Feb 2025 – June 2025",
     location: "Remote",
-    logo: "NW",
+    logo: "/assets/NXT.jpeg",
     description: [
       "Optimized 10+ deep learning models for speech, emotion, and personality recognition.",
       "Implemented state-of-the-art research papers on depression detection and voice analysis.",
       "Built a Voice Cloning System using OpenVoice and MeloTTS for high-fidelity speech synthesis.",
-      "Developed a resume generator pipeline converting YAML data to formatted PDFs."
-    ]
+      "Developed a resume generator pipeline converting YAML data to formatted PDFs.",
+    ],
   },
   {
     id: "2",
@@ -60,11 +64,11 @@ export const EXPERIENCE: Experience[] = [
     company: "SSRC (Datacamp)",
     period: "Feb 2025 – Present",
     location: "Remote",
-    logo: "DS",
+    logo: "/assets/SSRC.jpeg",
     description: [
       "Completed 5+ comprehensive data science projects involving cleaning, visualization, and statistical modeling.",
-      "Mastered advanced machine learning workflows and data analysis techniques."
-    ]
+      "Mastered advanced machine learning workflows and data analysis techniques.",
+    ],
   },
   {
     id: "3",
@@ -72,12 +76,12 @@ export const EXPERIENCE: Experience[] = [
     company: "StatDuck",
     period: "Apr 2024 – Jun 2024",
     location: "Remote",
-    logo: "SD",
+    logo: "/assets/statduck.jpeg",
     description: [
       "Designed intuitive Web3 interfaces for an AI-powered analytics platform using Figma.",
-      "Prototyped and resolved complex UI/UX challenges using no-code tools like Bubble, improving user retention."
-    ]
-  }
+      "Prototyped and resolved complex UI/UX challenges using no-code tools like Bubble, improving user retention.",
+    ],
+  },
 ];
 
 export const BLOGS: Blog[] = [
@@ -85,7 +89,8 @@ export const BLOGS: Blog[] = [
     id: "b1",
     title: "The State of Voice Cloning in 2025",
     date: "August 15, 2025",
-    excerpt: "Exploring the ethical implications and technical advancements in OpenVoice and MeloTTS.",
+    excerpt:
+      "Exploring the ethical implications and technical advancements in OpenVoice and MeloTTS.",
     url: "/blog/b1",
     tags: ["AI", "Voice Synthesis", "Ethics"],
     content: `
@@ -99,13 +104,14 @@ export const BLOGS: Blog[] = [
       
       <h3>Technical Implementation</h3>
       <p>During my internship at Next Wave AI, I implemented a pipeline that separates tone, color, and rhythm. This allows for fine-grained control over the generated speech, making it sound more natural and less robotic compared to previous generations.</p>
-    `
+    `,
   },
   {
     id: "b2",
     title: "Designing for Web3: A UX Perspective",
     date: "July 02, 2025",
-    excerpt: "How to simplify blockchain complexity through intuitive component design and visual feedback.",
+    excerpt:
+      "How to simplify blockchain complexity through intuitive component design and visual feedback.",
     url: "/blog/b2",
     tags: ["UI/UX", "Web3", "Design Systems"],
     content: `
@@ -116,13 +122,14 @@ export const BLOGS: Blog[] = [
       
       <h3>Feedback Loops</h3>
       <p>Blockchain transactions are slow. To prevent user frustration, the interface must provide constant, reassuring feedback. We utilized optimistic UI updates to make the application feel instant, even while the transaction was confirming in the background.</p>
-    `
+    `,
   },
   {
     id: "b3",
     title: "Building a Redis Clone from Scratch",
     date: "June 10, 2025",
-    excerpt: "Lessons learned implementing TCP protocols and replication strategies in Python.",
+    excerpt:
+      "Lessons learned implementing TCP protocols and replication strategies in Python.",
     url: "/blog/b3",
     tags: ["Systems Programming", "Python", "Database"],
     content: `
@@ -136,8 +143,8 @@ export const BLOGS: Blog[] = [
       
       <h3>Replication</h3>
       <p>Implementing master-slave replication involved sending a handshake command stream. The most challenging part was ensuring data consistency during the initial synchronization phase (RDB file transfer).</p>
-    `
-  }
+    `,
+  },
 ];
 
 export const EDUCATION = [
@@ -145,13 +152,25 @@ export const EDUCATION = [
     institution: "Kathmandu Model Secondary School",
     degree: "+2, Physical Stream with Computer Science",
     year: "2023",
-    gpa: "3.91/4.0"
-  }
+    gpa: "3.91/4.0",
+  },
 ];
 
 export const SKILLS = {
-  certifications: ["CS50 AI with Python – Harvard (edX)", "District Mathematics Olympiad", "Datacamp certificates"],
-  technologies: ["Python", "JavaScript (React, Next.js)", "TensorFlow", "GitHub", "Seaborn", "PostgreSQL", "Prisma"],
+  certifications: [
+    "CS50 AI with Python – Harvard (edX)",
+    "District Mathematics Olympiad",
+    "Datacamp certificates",
+  ],
+  technologies: [
+    "Python",
+    "JavaScript (React, Next.js)",
+    "TensorFlow",
+    "GitHub",
+    "Seaborn",
+    "PostgreSQL",
+    "Prisma",
+  ],
   core: ["Deep Learning", "Machine Learning", "Data Analysis", "UI/UX Design"],
-  interests: ["Football", "Chess", "Traveling", "Movies"]
+  interests: ["Football", "Chess", "Traveling", "Movies"],
 };

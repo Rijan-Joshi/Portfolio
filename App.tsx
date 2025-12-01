@@ -69,11 +69,11 @@ const App: React.FC = () => {
     <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 font-sans transition-colors duration-300">
-        {/* Playful Bot Widget */}
+        {/* Playful Bot Widget - Hidden when printing */}
         <PlayfulCharacter />
 
-        {/* Mobile Header */}
-        <div className="lg:hidden fixed top-0 left-0 right-0 z-50 px-6 py-4 flex justify-between items-center bg-neutral-50/80 dark:bg-neutral-950/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
+        {/* Mobile Header - Hidden when printing */}
+        <div className="lg:hidden fixed top-0 left-0 right-0 z-50 px-6 py-4 flex justify-between items-center bg-neutral-50/80 dark:bg-neutral-950/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 print:hidden">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-full overflow-hidden border border-neutral-200 dark:border-neutral-700">
               <img
@@ -96,10 +96,10 @@ const App: React.FC = () => {
 
         {/* Layout Container */}
         <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row">
-          {/* Left Sidebar (Fixed width on Desktop, Sticky) */}
+          {/* Left Sidebar (Fixed width on Desktop, Sticky) - Hidden when printing */}
           <aside
             className={`
-            fixed inset-0 z-40 bg-neutral-50 dark:bg-neutral-950 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:w-80 lg:h-screen lg:sticky lg:top-0 border-r border-neutral-200 dark:border-neutral-800/50 flex-shrink-0
+            fixed inset-0 z-40 bg-neutral-50 dark:bg-neutral-950 transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:w-80 lg:h-screen lg:sticky lg:top-0 border-r border-neutral-200 dark:border-neutral-800/50 flex-shrink-0 print:hidden
             ${isMobileOpen ? "translate-x-0" : "-translate-x-full"}
           `}
           >
@@ -112,8 +112,8 @@ const App: React.FC = () => {
           </aside>
 
           {/* Right Content Area (Takes remaining space, wider container) */}
-          <main className="flex-1 min-h-screen pt-24 lg:pt-0">
-            <div className="px-6 lg:px-16 lg:py-24 max-w-5xl mx-auto w-full">
+          <main className="flex-1 min-h-screen pt-24 lg:pt-0 print:pt-0 print:w-full">
+            <div className="px-6 lg:px-16 lg:py-24 max-w-5xl mx-auto w-full print:px-0 print:py-0 print:max-w-none">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
@@ -124,11 +124,11 @@ const App: React.FC = () => {
               </Routes>
 
               {/* Footer: Signature first, Copyright last */}
-              <footer className="mt-20 pb-10 border-t border-neutral-200 dark:border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-400">
+              <footer className="mt-20 pb-10 border-t border-neutral-200 dark:border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-400 print:mt-8 print:border-none">
                 <div className="order-1 md:order-1 mb-4 md:mb-0">
                   <Signature />
                 </div>
-                <div className="order-2 md:order-2">
+                <div className="order-2 md:order-2 print:hidden">
                   <p>&copy; {new Date().getFullYear()} Rijan Shrestha.</p>
                 </div>
               </footer>

@@ -5,20 +5,20 @@ import Tooltip from "./Tooltip";
 
 const TRACKS = [
   {
-    title: "Three Little Birds",
-    src: "/music/3_little_birds.mp3",
-  },
-  {
-    title: "Deurali Ma Batas",
-    src: "/music/Deurali_ma_batas_chalyo.mp3",
-  },
-  {
     title: "When We Feel Young",
     src: "/music/When_we_feel_young.mp3",
   },
   {
+    title: "Three Little Birds",
+    src: "/music/3_little_birds.mp3",
+  },
+  {
     title: "Resham Phiriri",
     src: "/music/Resham_Phiriri.mp3",
+  },
+  {
+    title: "Deurali Ma Batas",
+    src: "/music/Deurali_ma_batas_chalyo.mp3",
   },
   {
     title: "Ob-La-Di, Ob-La-Da",
