@@ -19,7 +19,7 @@ const Home: React.FC = () => {
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="space-y-16 lg:space-y-24 pb-20"
+      className="space-y-24 pb-20"
     >
       {/* Mobile-Only Profile Header */}
       <motion.div
@@ -91,7 +91,7 @@ const Home: React.FC = () => {
           About
         </h2>
         {/* Adjusted font size: Reduced from text-3xl to text-lg/xl for better readability */}
-        <div className="prose dark:prose-invert max-w-none text-neutral-700 dark:text-neutral-300 text-4xl md:text-xl leading-tight font-light">
+        <div className="prose dark:prose-invert max-w-none text-neutral-700 dark:text-neutral-300 text-lg md:text-3xl leading-tight font-light">
           <p>learning ML - trying to implement a new paper every Friday.</p>
         </div>
       </motion.section>
@@ -101,7 +101,7 @@ const Home: React.FC = () => {
         <h2 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-10">
           Experience
         </h2>
-        <div className="space-y-4">
+        <div className="space-y-2">
           {EXPERIENCE.map((exp) => (
             <ExperienceItem key={exp.id} experience={exp} />
           ))}
