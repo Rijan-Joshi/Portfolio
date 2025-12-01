@@ -7,7 +7,7 @@ import {
   SKILLS,
 } from "../constants";
 import { motion } from "framer-motion";
-import { Download, Mail, Phone, Github, Globe } from "lucide-react";
+import { Download, Mail, Phone, Github } from "lucide-react";
 import Tooltip from "../components/Tooltip";
 
 const Resume: React.FC = () => {

@@ -26,7 +26,6 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({
   isDarkMode,
   toggleTheme,
-  isMobileOpen,
   closeMobileMenu,
 }) => {
   const navItems = [
