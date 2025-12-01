@@ -26,6 +26,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({
   isDarkMode,
   toggleTheme,
+  isMobileOpen,
   closeMobileMenu,
 }) => {
   const navItems = [
@@ -35,7 +36,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   ];
 
   return (
-    <div className="flex flex-col h-full p-6 lg:p-10 relative overflow-y-auto scrollbar-thin scrollbar-thumb-neutral-200 dark:scrollbar-thumb-neutral-800">
+    <div className="flex flex-col h-full p-6 pt-28 lg:p-10 lg:pt-10 relative overflow-y-auto scrollbar-thin scrollbar-thumb-neutral-200 dark:scrollbar-thumb-neutral-800">
       {/* Profile Header */}
       <div className="flex flex-col items-start mb-8">
         <motion.div

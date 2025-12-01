@@ -49,13 +49,16 @@ const PlayfulCharacter: React.FC = () => {
       // Mobile: Fixed Bottom Right
       // Desktop (lg): Fixed Top Right
       // Print: Hidden
-      className="fixed z-[60] right-6 bottom-6 lg:top-6 lg:bottom-auto block print:hidden"
+      className="fixed z-[60] right-6 bottom-6 lg:top-6 lg:bottom-auto block print:hidden touch-none"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}
+      drag
+      dragMomentum={false}
+      whileDrag={{ scale: 1.1, cursor: "grabbing" }}
     >
       <div
-        className="relative cursor-pointer group"
+        className="relative cursor-pointer cursor-grab active:cursor-grabbing group"
         onMouseEnter={handleHoverStart}
         onMouseLeave={() => setIsHovered(false)}
         onClick={handleClick}

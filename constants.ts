@@ -106,45 +106,45 @@ export const BLOGS: Blog[] = [
       <p>During my internship at Next Wave AI, I implemented a pipeline that separates tone, color, and rhythm. This allows for fine-grained control over the generated speech, making it sound more natural and less robotic compared to previous generations.</p>
     `,
   },
-  {
-    id: "b2",
-    title: "Designing for Web3: A UX Perspective",
-    date: "July 02, 2025",
-    excerpt:
-      "How to simplify blockchain complexity through intuitive component design and visual feedback.",
-    url: "/blog/b2",
-    tags: ["UI/UX", "Web3", "Design Systems"],
-    content: `
-      <p>Web3 applications are notorious for their steep learning curve. Wallet connections, gas fees, and transaction hashes are foreign concepts to most users. As UI/UX designers, our job is to abstract this complexity.</p>
-      
-      <h3>Masking Complexity</h3>
-      <p>At StatDuck, we focused on "progressive disclosure." Users shouldn't see a raw hexadecimal address unless they explicitly ask for it. Instead, we use visual avatars (like Blockies) and human-readable aliases.</p>
-      
-      <h3>Feedback Loops</h3>
-      <p>Blockchain transactions are slow. To prevent user frustration, the interface must provide constant, reassuring feedback. We utilized optimistic UI updates to make the application feel instant, even while the transaction was confirming in the background.</p>
-    `,
-  },
-  {
-    id: "b3",
-    title: "Building a Redis Clone from Scratch",
-    date: "June 10, 2025",
-    excerpt:
-      "Lessons learned implementing TCP protocols and replication strategies in Python.",
-    url: "/blog/b3",
-    tags: ["Systems Programming", "Python", "Database"],
-    content: `
-      <p>There is no better way to understand how a database works than to build one yourself. I recently undertook the "Build Your Own Redis" challenge, and here is what I learned.</p>
-      
-      <h3>The RESP Protocol</h3>
-      <p>Redis uses the REdis Serialization Protocol (RESP). It's human-readable yet efficient. Implementing the parser was the first hurdle, requiring careful handling of CRLF terminators and various data types like Simple Strings and Bulk Strings.</p>
-      
-      <h3>Handling Concurrency</h3>
-      <p>I chose to use Python's \`asyncio\` library to handle concurrent connections. This allows the server to handle thousands of requests without the overhead of threading, mimicking Redis's single-threaded event loop architecture.</p>
-      
-      <h3>Replication</h3>
-      <p>Implementing master-slave replication involved sending a handshake command stream. The most challenging part was ensuring data consistency during the initial synchronization phase (RDB file transfer).</p>
-    `,
-  },
+  // {
+  //   id: "b2",
+  //   title: "Designing for Web3: A UX Perspective",
+  //   date: "July 02, 2025",
+  //   excerpt:
+  //     "How to simplify blockchain complexity through intuitive component design and visual feedback.",
+  //   url: "/blog/b2",
+  //   tags: ["UI/UX", "Web3", "Design Systems"],
+  //   content: `
+  //     <p>Web3 applications are notorious for their steep learning curve. Wallet connections, gas fees, and transaction hashes are foreign concepts to most users. As UI/UX designers, our job is to abstract this complexity.</p>
+
+  //     <h3>Masking Complexity</h3>
+  //     <p>At StatDuck, we focused on "progressive disclosure." Users shouldn't see a raw hexadecimal address unless they explicitly ask for it. Instead, we use visual avatars (like Blockies) and human-readable aliases.</p>
+
+  //     <h3>Feedback Loops</h3>
+  //     <p>Blockchain transactions are slow. To prevent user frustration, the interface must provide constant, reassuring feedback. We utilized optimistic UI updates to make the application feel instant, even while the transaction was confirming in the background.</p>
+  //   `,
+  // },
+  // {
+  //   id: "b3",
+  //   title: "Building a Redis Clone from Scratch",
+  //   date: "June 10, 2025",
+  //   excerpt:
+  //     "Lessons learned implementing TCP protocols and replication strategies in Python.",
+  //   url: "/blog/b3",
+  //   tags: ["Systems Programming", "Python", "Database"],
+  //   content: `
+  //     <p>There is no better way to understand how a database works than to build one yourself. I recently undertook the "Build Your Own Redis" challenge, and here is what I learned.</p>
+
+  //     <h3>The RESP Protocol</h3>
+  //     <p>Redis uses the REdis Serialization Protocol (RESP). It's human-readable yet efficient. Implementing the parser was the first hurdle, requiring careful handling of CRLF terminators and various data types like Simple Strings and Bulk Strings.</p>
+
+  //     <h3>Handling Concurrency</h3>
+  //     <p>I chose to use Python's \`asyncio\` library to handle concurrent connections. This allows the server to handle thousands of requests without the overhead of threading, mimicking Redis's single-threaded event loop architecture.</p>
+
+  //     <h3>Replication</h3>
+  //     <p>Implementing master-slave replication involved sending a handshake command stream. The most challenging part was ensuring data consistency during the initial synchronization phase (RDB file transfer).</p>
+  //   `,
+  // },
 ];
 
 export const EDUCATION = [
