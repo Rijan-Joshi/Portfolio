@@ -5,28 +5,28 @@ import Tooltip from "./Tooltip";
 
 const TRACKS = [
   {
-    title: "When we feel young",
-    src: "https://github.com/Rijan-Joshi/Portfolio/blob/main/music/When_we_feel_young.mp3",
+    title: "Three Little Birds",
+    src: "/music/3_little_birds.mp3",
+  },
+  {
+    title: "Deurali Ma Batas",
+    src: "/music/Deurali_ma_batas_chalyo.mp3",
+  },
+  {
+    title: "When We Feel Young",
+    src: "/music/When_we_feel_young.mp3",
   },
   {
     title: "Resham Phiriri",
-    src: "https://github.com/Rijan-Joshi/Portfolio/blob/main/music/Resham_Phiriri.mp3",
+    src: "/music/Resham_Phiriri.mp3",
   },
   {
-    title: "Three Little Birds",
-    src: "https://github.com/Rijan-Joshi/Portfolio/blob/main/music/3_little_birds.mp3",
+    title: "Ob-La-Di, Ob-La-Da",
+    src: "/music/ObLaDiObLaDa.mp3",
   },
   {
-    title: "Ob La Di Ob La Da",
-    src: "https://github.com/Rijan-Joshi/Portfolio/blob/main//music/ObLaDiObLaDa.mp3",
-  },
-  {
-    title: "Deurali ma batas chalyo",
-    src: "https://github.com/Rijan-Joshi/Portfolio/blob/main/music/Deurali_ma_batas_chalyo.mp3",
-  },
-  {
-    title: "No Sunshine",
-    src: "https://github.com/Rijan-Joshi/Portfolio/blob/main/music/No_Sunshine.mp3",
+    title: "Ain't No Sunshine",
+    src: "/music/No_Sunshine.mp3",
   },
 ];
 
