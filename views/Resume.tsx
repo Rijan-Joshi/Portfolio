@@ -1,15 +1,20 @@
-import React from 'react';
-import { PERSONAL_INFO, EXPERIENCE, PROJECTS, EDUCATION, SKILLS } from '../constants';
-import { motion } from 'framer-motion';
-import { Download, Mail, Phone, Github, Globe } from 'lucide-react';
-import Tooltip from '../components/Tooltip';
+import React from "react";
+import {
+  PERSONAL_INFO,
+  EXPERIENCE,
+  PROJECTS,
+  EDUCATION,
+  SKILLS,
+} from "../constants";
+import { motion } from "framer-motion";
+import { Download, Mail, Phone, Github } from "lucide-react";
+import Tooltip from "../components/Tooltip";
 
 const Resume: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-8 md:p-12 shadow-sm print:shadow-none print:border-none print:p-0">
-      
       {/* Header */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         className="border-b-2 border-neutral-900 dark:border-neutral-100 pb-6 mb-6"
@@ -18,7 +23,10 @@ const Resume: React.FC = () => {
           {PERSONAL_INFO.name}
         </h1>
         <div className="flex flex-wrap gap-4 text-sm text-neutral-600 dark:text-neutral-400">
-          <a href={`mailto:${PERSONAL_INFO.email}`} className="flex items-center hover:text-primary transition-colors">
+          <a
+            href={`mailto:${PERSONAL_INFO.email}`}
+            className="flex items-center hover:text-primary transition-colors"
+          >
             <Mail size={14} className="mr-1.5" />
             {PERSONAL_INFO.email}
           </a>
@@ -28,20 +36,22 @@ const Resume: React.FC = () => {
             {PERSONAL_INFO.phone}
           </span>
           <span className="text-neutral-300 dark:text-neutral-700">|</span>
-          <span className="flex items-center">
-            {PERSONAL_INFO.location}
-          </span>
+          <span className="flex items-center">{PERSONAL_INFO.location}</span>
           <span className="text-neutral-300 dark:text-neutral-700">|</span>
-          <a href={PERSONAL_INFO.github} target="_blank" rel="noreferrer" className="flex items-center hover:text-primary transition-colors">
-             <Github size={14} className="mr-1.5" />
-             GitHub
+          <a
+            href={PERSONAL_INFO.github}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center hover:text-primary transition-colors"
+          >
+            <Github size={14} className="mr-1.5" />
+            GitHub
           </a>
         </div>
       </motion.div>
 
       {/* Content Grid */}
       <div className="space-y-8">
-        
         {/* Experience */}
         <section>
           <h2 className="text-lg font-bold uppercase tracking-wider text-neutral-900 dark:text-white border-b border-neutral-300 dark:border-neutral-700 mb-4 pb-1">
@@ -68,7 +78,10 @@ const Resume: React.FC = () => {
                 </div>
                 <ul className="list-disc list-outside ml-4 space-y-1">
                   {exp.description.map((item, idx) => (
-                    <li key={idx} className="text-sm text-neutral-600 dark:text-neutral-400 leading-normal pl-1">
+                    <li
+                      key={idx}
+                      className="text-sm text-neutral-600 dark:text-neutral-400 leading-normal pl-1"
+                    >
                       {item}
                     </li>
                   ))}
@@ -91,22 +104,27 @@ const Resume: React.FC = () => {
                     {proj.title}
                   </h3>
                   {proj.github && (
-                    <a href={proj.github} className="text-xs text-primary dark:text-blue-400 hover:underline">
+                    <a
+                      href={proj.github}
+                      className="text-xs text-primary dark:text-blue-400 hover:underline"
+                    >
                       GitHub
                     </a>
                   )}
                 </div>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-normal">
-                   <span className="text-neutral-900 dark:text-white mr-1">✓</span>
-                   {proj.description}
+                  <span className="text-neutral-900 dark:text-white mr-1">
+                    ✓
+                  </span>
+                  {proj.description}
                 </p>
                 {/* Simplified bullet for technical aspect if needed, mirroring resume style */}
                 {proj.techStack && (
-                    <ul className="list-disc list-outside ml-5 mt-1">
-                       <li className="text-sm text-neutral-600 dark:text-neutral-400">
-                         Tools: {proj.techStack.join('; ')}
-                       </li>
-                    </ul>
+                  <ul className="list-disc list-outside ml-5 mt-1">
+                    <li className="text-sm text-neutral-600 dark:text-neutral-400">
+                      Tools: {proj.techStack.join("; ")}
+                    </li>
+                  </ul>
                 )}
               </div>
             ))}
@@ -120,16 +138,28 @@ const Resume: React.FC = () => {
           </h2>
           <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
             <li>
-              <strong className="text-neutral-900 dark:text-white">Certifications:</strong> {SKILLS.certifications.join('; ')}
+              <strong className="text-neutral-900 dark:text-white">
+                Certifications:
+              </strong>{" "}
+              {SKILLS.certifications.join("; ")}
             </li>
             <li>
-              <strong className="text-neutral-900 dark:text-white">Technologies:</strong> {SKILLS.technologies.join('; ')}
+              <strong className="text-neutral-900 dark:text-white">
+                Technologies:
+              </strong>{" "}
+              {SKILLS.technologies.join("; ")}
             </li>
             <li>
-              <strong className="text-neutral-900 dark:text-white">Skills:</strong> {SKILLS.core.join('; ')}
+              <strong className="text-neutral-900 dark:text-white">
+                Skills:
+              </strong>{" "}
+              {SKILLS.core.join("; ")}
             </li>
             <li>
-              <strong className="text-neutral-900 dark:text-white">Interests:</strong> {SKILLS.interests.join('; ')}
+              <strong className="text-neutral-900 dark:text-white">
+                Interests:
+              </strong>{" "}
+              {SKILLS.interests.join("; ")}
             </li>
           </ul>
         </section>
@@ -158,21 +188,19 @@ const Resume: React.FC = () => {
             </div>
           ))}
         </section>
-
       </div>
 
       <div className="mt-12 text-center print:hidden">
         <Tooltip content="Save as PDF">
-            <button 
+          <button
             onClick={() => window.print()}
             className="inline-flex items-center gap-2 px-6 py-2.5 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-full font-medium hover:opacity-90 transition-opacity"
-            >
+          >
             <Download size={18} />
             Print / Download PDF
-            </button>
+          </button>
         </Tooltip>
       </div>
-
     </div>
   );
 };
