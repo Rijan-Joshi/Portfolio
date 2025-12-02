@@ -125,7 +125,7 @@ const Home: React.FC = () => {
             />
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col gap-6">
           {PROJECTS.slice(0, 2).map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

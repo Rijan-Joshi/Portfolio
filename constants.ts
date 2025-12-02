@@ -21,7 +21,8 @@ export const PROJECTS: Project[] = [
       "A high-performance custom Redis server implementation in Python. Features concurrent client handling via TCP, primary-replica replication, transaction support, and RDB persistence mechanisms.",
     techStack: ["Python", "TCP/IP", "Asyncio", "Distributed Systems"],
     link: "#",
-    github: "https://github.com/Rijan-Joshi",
+    github:
+      "https://github.com/Rijan-Joshi/Rijan-Joshi-codecrafters-redis-python",
   },
   {
     id: "2",
@@ -39,6 +40,15 @@ export const PROJECTS: Project[] = [
       "A cross-platform mobile application for job searching with a focus on UX. Features advanced filtering, easy application flows, and a modern, responsive interface built with React Native.",
     techStack: ["React Native", "Expo", "Redux", "Mobile UI"],
     link: "#",
+    github: "https://github.com/Rijan-Joshi/JobSearch",
+  },
+  {
+    id: "4",
+    title: "Rock Paper Scissors Game",
+    description:
+      "A simple and fun rock paper scissors game built with React. Features a modern, responsive interface built with React.",
+    techStack: ["React", "HTML", "CSS", "JavaScript"],
+    link: "https://rock-paper-scissors-by-rijan.netlify.app/",
     github: "https://github.com/Rijan-Joshi",
   },
 ];
