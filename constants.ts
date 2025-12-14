@@ -15,6 +15,27 @@ export const PERSONAL_INFO = {
 
 export const PROJECTS: Project[] = [
   {
+    id: "0",
+    title: "Research Paper / Architecture Implementation & Experimentation",
+    description: `This project focuses on implementing and experimenting with research papers and neural network architectures.
+
+No pre-built model imports are used (e.g., torchvision.models). Every layer, training loop, and architecture is built from the ground up to deeply understand the internal mechanics.
+
+Implementations use either:
+1. NumPy — for true low-level mathematical implementations of operations such as convolution, backpropagation, and optimizers.
+2. PyTorch Tensors — for higher-level implementations that leverage CUDA acceleration and automatic differentiation where appropriate.`,
+    techStack: [
+      "Python",
+      "NumPy",
+      "Deep Learning",
+      "Machine Learning",
+      "PyTorch",
+      "Matplotlib",
+    ],
+    link: "#",
+    github: "https://github.com/Rijan-Joshi/Paper-Reproduction",
+  },
+  {
     id: "1",
     title: "Redis-like In-Memory DB",
     description:
