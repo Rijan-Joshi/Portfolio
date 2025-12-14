@@ -24,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </h3>
         </div>
 
-        <p className="text-neutral-600 dark:text-neutral-300 text-sm md:text-base leading-relaxed mb-6 flex-grow">
+        <p className="text-neutral-600 dark:text-neutral-300 text-sm md:text-base leading-relaxed mb-6 flex-grow whitespace-pre-line">
           {project.description}
         </p>
 
