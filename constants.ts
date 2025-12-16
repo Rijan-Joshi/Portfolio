@@ -40,6 +40,15 @@ export const PROJECTS: Project[] = [
       "https://github.com/Rijan-Joshi/Rijan-Joshi-codecrafters-redis-python",
   },
   {
+    id: "3",
+    title: "Voice Cloner",
+    description:
+      "A voice cloning system that combines MeloTTS and OpenVoice to generate high-quality, natural-sounding voice from text using voice cloning technology.",
+    techStack: ["TensorFlow", "Deep Learning", "Python", "NLP"],
+    link: "#",
+    github: "https://github.com/Rijan-Joshi",
+  },
+  {
     id: "2",
     title: "RNN Music Composer",
     description:
@@ -48,8 +57,9 @@ export const PROJECTS: Project[] = [
     link: "#",
     github: "https://github.com/Rijan-Joshi",
   },
+
   {
-    id: "3",
+    id: "4",
     title: "Job Finder Mobile App",
     description:
       "A cross-platform mobile application for job searching with a focus on UX. Features advanced filtering, easy application flows, and a modern, responsive interface built with React Native.",
@@ -58,7 +68,7 @@ export const PROJECTS: Project[] = [
     github: "https://github.com/Rijan-Joshi/JobSearch",
   },
   {
-    id: "4",
+    id: "5",
     title: "Rock Paper Scissors Game",
     description:
       "A simple and fun rock paper scissors game built with React. Features a modern, responsive interface built with React.",
